@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>CESINF – Accueil</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Style global */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, sans-serif;
+            line-height: 1.6;
+            color: #222;
+            background-color: #f5f5f7;
+        }
+
+        /* Header / navigation */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: #ffffff;
+            border-bottom: 1px solid #ddd;
+            padding: 0.75rem 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+        }
+
+        .logo-mark {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 999px;
+            border: 1px solid #333;
+            font-size: 1.1rem;
+        }
+
+        .main-nav a {
+            margin-left: 1rem;
+            text-decoration: none;
+            font-size: 0.95rem;
+            color: #444;
+        }
+
+        /* Sections */
+        .section {
+            padding: 3rem 8%;
+        }
+
+        .section-alt {
+            background-color: #ffffff;
+        }
+
+        .section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-intro {
+            max-width: 600px;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Hero (page de garde) */
+        .hero {
+            padding: 4rem 8%;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        /* Hero image */
+        .hero-image img {
+            width: 400px;
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        /* Contact form */
+        .contact-form {
+            max-width: 500px;
+        }
+
+        .form-row {
+            margin-bottom: 1rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-row input,
+        .form-row textarea {
+            padding: 0.6rem 0.8rem;
+            border-radius: 0.5rem;
+            border: 1px solid #ccc;
+            font: inherit;
+        }
+
+        /* Footer */
+        .site-footer {
+            padding: 1.5rem 8%;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #666;
+            border-top: 1px solid #ddd;
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="logo">
+        <span class="logo-mark">C</span>
+        <span class="logo-text">CESINF</span>
+    </div>
+    <nav class="main-nav">
+        <a href="#accueil">ACCUEIL</a>
+        <a href="#services">SERVICES</a>
+        <a href="#contact">CONTACT</a>
+    </nav>
+</header>
+
+<!-- 🎯 PAGE DE GARDE (à ne plus modifier) -->
+<section id="garde" class="hero">
+    <div class="hero-text">
+        <h1>Conseil & développement pour PME</h1>
+        <p>
+            Conception de systèmes d’information et développement d’applications
+            de bureau et web adaptés aux besoins des petites et moyennes entreprises.
+        </p>
+    </div>
+</section>
+
+<!-- 🎯 PAGE ACCUEIL — 1ère partie -->
+<section id="accueil" class="hero">
+    <!-- Image à gauche -->
+    <div class="hero-image">
+        <img src="mission_img.png" alt="Illustration des missions CESINF">
+    </div>
+
+    <!-- Texte à droite -->
+    <div class="hero-text">
+        <h2>Accueil</h2>
+        <p>
+            CESINF accompagne les petites et moyennes entreprises dans la conception
+            de leur système d'information et le développement d'applications sur mesure.
+        </p>
+    </div>
+</section>
+
+<!-- 🎯 SERVICES -->
+<section id="services" class="section section-alt">
+    <h2>Services</h2>
+
+    <p class="section-intro">
+        Quelques exemples de prestations CESINF autour du développement, du conseil
+        et de l'organisation informatique.
+    </p>
+
+    <div class="cards">
+        <article class="card">
+            <h3>Gestion de stock multi-sites</h3>
+            <p>
+                Mise en place d’un outil de gestion des stocks avec seuils d’alerte,
+                entrées/sorties et synthèses par site et globales.
+            </p>
+        </article>
+        <article class="card">
+            <h3>Suivi d’activité</h3>
+            <p>
+                Développement d’une application de bureau pour suivre la production
+                et éditer des rapports pour la direction.
+            </p>
+        </article>
+        <article class="card">
+            <h3>Conception du système d’information</h3>
+            <p>
+                Analyse des besoins, modélisation des données et des flux
+                pour structurer le système d’information d’une PME.
+            </p>
+        </article>
+    </div>
+</section>
+
+<!-- 🎯 CONTACT -->
+<section id="contact" class="section">
+    <h2>Contact</h2>
+
+    <form class="contact-form">
+        <div class="form-row">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom">
+        </div>
+
+        <div class="form-row">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email">
+        </div>
+
+        <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5"></textarea>
+        </div>
+    </form>
+</section>
+
+<footer class="site-footer">
+    <p>&copy; <span id="year"></span> – CESINF</p>
+</footer>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
