@@ -1,0 +1,193 @@
+
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Synthèse | CESINF</title>
+  <meta name="description" content="Synthèse des actions CESINF : optimisation de l'infrastructure et création de nouvelles solutions logicielles." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0b0e14;
+      --text:#e6e8ef;
+      --muted:#a5adcb;
+      --brand:#7fffb3;
+      --brand-2:#9cffc9;
+    }
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    body{
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:linear-gradient(180deg,#0a0e14 0%,#0b1220 100%);
+      color:var(--text);
+      line-height:1.7;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+    }
+
+    header{
+      padding:16px 5vw;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .site-title{
+      font-weight:700;
+      font-size:20px;
+      color:var(--brand);
+    }
+
+    .back-link{
+      font-size:14px;
+      text-decoration:none;
+      color:var(--brand);
+      font-weight:500;
+    }
+
+    .back-link:hover{
+      color:var(--brand-2);
+    }
+
+    main{
+      flex:1;
+      padding:60px 8vw 80px;
+      display:flex;
+      justify-content:center;
+      align-items:flex-start;
+    }
+
+    .synthese-wrapper{
+      max-width:1100px;
+      width:100%;
+      display:flex;
+      flex-wrap:wrap;
+      gap:40px;
+    }
+
+    .synthese-text{
+      flex:1 1 320px;
+      min-width:260px;
+    }
+
+    .synthese-images{
+      flex:1 1 260px;
+      min-width:240px;
+      display:flex;
+      flex-direction:column;
+      gap:20px;
+      align-items:flex-start;
+    }
+
+    h1{
+      font-size:32px;
+      color:var(--brand);
+      margin-bottom:10px;
+    }
+
+    .subtitle{
+      font-size:18px;
+      color:var(--muted);
+      margin-bottom:24px;
+    }
+
+    p{
+      font-size:18px;
+      margin-bottom:18px;
+    }
+
+    .synthese-images img{
+      max-width:260px;
+      width:100%;
+      height:auto;
+      border-radius:16px;
+      box-shadow:0 14px 30px rgba(0,0,0,0.45);
+    }
+
+    footer{
+      text-align:center;
+      padding:16px 0 20px;
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    @media (max-width:800px){
+      main{
+        padding-top:40px;
+      }
+      .synthese-wrapper{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+      .synthese-images{
+        align-items:center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- En-tête avec lien retour -->
+  <header>
+    <div class="site-title">CESINF</div>
+    <nav>
+      <a href="index.html" class="back-link">← Retour au site</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="synthese-wrapper">
+
+      <!-- Texte de synthèse à gauche -->
+      <section class="synthese-text">
+        <h1>Synthèse</h1>
+
+        <p>
+          Cette synthèse met en perspective deux dimensions complémentaires :
+          l’optimisation de votre infrastructure existante et la création de nouvelles
+          solutions logicielles adaptées à vos besoins.
+        </p>
+
+
+
+
+        <p>
+          L’optimisation de l’infrastructure consiste à tirer le meilleur parti de ce qui
+          est déjà en place&nbsp;: fiabiliser, sécuriser, simplifier et fluidifier les
+          usages pour vos équipes au quotidien.
+        </p>
+
+        <p>
+          La création de nouvelles solutions vient compléter cet existant lorsque cela
+          est pertinent&nbsp;: interfaces ciblées, outils dédiés à un métier, automatisation
+          de tâches récurrentes ou intégration plus fine entre vos applications.
+        </p>
+      </section>
+
+      <!-- Images à droite (réduites) -->
+      <aside class="synthese-images">
+        <img src="img/optimisation_infrastructure.png" alt="Optimisation de l'infrastructure">
+        <img src="img/nouvelles_solutions.png" alt="Création de nouvelles solutions logicielles">
+      </aside>
+
+    </div>
+  </main>
+
+  <footer>
+    © <span id="year"></span> CESINF — Synthèse
+  </footer>
+
+  <script>
+    // Mise à jour de l'année
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

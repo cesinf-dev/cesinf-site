@@ -1,236 +1,365 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>CESINF – Accueil</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        /* Style global */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CESINF – Conseil en Système d’Information</title>
+  <meta name="description" content="Freelance indépendant en développement logiciel et intégration de systèmes d'information pour PME." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css_final/style.css">
 
-        body {
-            font-family: system-ui, sans-serif;
-            line-height: 1.6;
-            color: #222;
-            background-color: #f5f5f7;
-        }
 
-        /* Header / navigation */
-        .site-header {
-            position: sticky;
-            top: 0;
-            z-index: 10;
-            background: #ffffff;
-            border-bottom: 1px solid #ddd;
-            padding: 0.75rem 8%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-weight: 600;
-        }
-
-        .logo-mark {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 32px;
-            height: 32px;
-            border-radius: 999px;
-            border: 1px solid #333;
-            font-size: 1.1rem;
-        }
-
-        .main-nav a {
-            margin-left: 1rem;
-            text-decoration: none;
-            font-size: 0.95rem;
-            color: #444;
-        }
-
-        /* Sections */
-        .section {
-            padding: 3rem 8%;
-        }
-
-        .section-alt {
-            background-color: #ffffff;
-        }
-
-        .section h2 {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .section-intro {
-            max-width: 600px;
-            margin-bottom: 1.5rem;
-        }
-
-        /* Hero (page de garde) */
-        .hero {
-            padding: 4rem 8%;
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-        }
-
-        .hero-text {
-            max-width: 600px;
-        }
-
-        /* Hero image */
-        .hero-image img {
-            width: 400px;
-            max-width: 100%;
-            border-radius: 8px;
-        }
-
-        /* Contact form */
-        .contact-form {
-            max-width: 500px;
-        }
-
-        .form-row {
-            margin-bottom: 1rem;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .form-row input,
-        .form-row textarea {
-            padding: 0.6rem 0.8rem;
-            border-radius: 0.5rem;
-            border: 1px solid #ccc;
-            font: inherit;
-        }
-
-        /* Footer */
-        .site-footer {
-            padding: 1.5rem 8%;
-            text-align: center;
-            font-size: 0.85rem;
-            color: #666;
-            border-top: 1px solid #ddd;
-            background-color: #ffffff;
-        }
-    </style>
 </head>
-
 <body>
-
-<header class="site-header">
-    <div class="logo">
-        <span class="logo-mark">C</span>
-        <span class="logo-text">CESINF</span>
+  <!-- =========================
+       HEADER
+       ========================= -->
+  <header>
+    <div class="logo-area">
+      <!-- Logo vectoriel -->
+      <svg width="70" height="70" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="Logo CESINF">
+        <ellipse cx="50" cy="50" rx="35" ry="20" fill="none" stroke="var(--ellipse-pink)" stroke-width="3" opacity="0.9"/>
+        <ellipse cx="50" cy="50" rx="20" ry="35" fill="none" stroke="var(--ellipse-pink)" stroke-width="3" opacity="0.9"/>
+        <ellipse cx="50" cy="50" rx="40" ry="10" fill="none" stroke="var(--ellipse-pink)" stroke-width="2" opacity="0.8"/>
+        <ellipse cx="50" cy="50" rx="10" ry="40" fill="none" stroke="var(--ellipse-pink)" stroke-width="2" opacity="0.8"/>
+        <ellipse cx="50" cy="50" rx="30" ry="30" fill="none" stroke="var(--ellipse-pink)" stroke-width="2" opacity="0.7"/>
+      </svg>
+      <span style="font-size:24px;font-weight:700;color:var(--brand)">CESINF</span>
     </div>
-    <nav class="main-nav">
-        <a href="#accueil">ACCUEIL</a>
-        <a href="#services">SERVICES</a>
-        <a href="#contact">CONTACT</a>
+    <nav>
+      <a href="#garde">ACCUEIL</a>
+      <a href="#mission">MÉTHODE</a>
+      <a href="#services">SOLUTIONS</a>
+      <a href="#contact">CONTACT</a>
     </nav>
-</header>
+  </header>
 
-<!-- 🎯 PAGE DE GARDE (à ne plus modifier) -->
-<section id="garde" class="hero">
-    <div class="hero-text">
-        <h1>Conseil & développement pour PME</h1>
+  <!-- =========================
+       PAGE 1 : GARDE + AUDIO 1
+       ========================= -->
+  <section id="garde" class="hero">
+    <div>
+      <h1>CESINF</h1>
+      <h2 class="slogan">
+      Des outils adaptés à votre organisation et à vos besoins métiers.
+      </h2>
+      <p class="lead">
+        En tant que <strong>Freelance indépendant</strong>, j’accompagne les PME dans l’évolution de leurs outils et de leur système d’information.
+        J’interviens sur l’organisation des processus métiers, l’automatisation de certaines tâches
+        et la mise en place de solutions logicielles adaptées aux besoins de l’entreprise.
+      </p>
+      <!-- Phrase courte et discrète à la place de la phrase longue -->
+      <p class="hero-note"><em>Cliquez sur les boutons audio.</em></p>
+
+      <!-- Bouton audio 1 (page de garde) -->
+      <button
+        id="btn-audio1"
+        class="audio-button"
+        type="button"
+        data-label="Écouter la présentation"
+        data-label-pause="Pause présentation"
+      >
+        Écouter la présentation
+      </button>
+
+      <!-- Lecteur audio 1 (sans contrôles visibles) -->
+      <audio id="audio1">
+        <source src="audio/audio1.mp3" type="audio/mpeg">
+        Votre navigateur ne supporte pas la balise audio.
+      </audio>
+
+    </div>
+  </section>
+
+
+
+
+  <!-- =========================
+       PAGE 2 : MA MISSION + EXPERTISE
+       ========================= -->
+  <section id="mission" class="mission reveal">
+    <div class="mission-inner">
+      <div class="mission-image">
+        <img src="img/mission_img.png" alt="Illustration de la mission CESINF">
+      </div>
+      <div class="mission-text">
+        <h2>Ma mission</h2>
         <p>
-            Conception de systèmes d’information et développement d’applications
-            de bureau et web adaptés aux besoins des petites et moyennes entreprises.
+          J’accompagne les PME dans l’analyse de leur organisation,
+          de leurs outils et de leurs processus métiers
+          afin d’identifier des solutions adaptées à leur fonctionnement.
+
+          L’objectif est de simplifier certaines tâches, améliorer la circulation des informations
+          et faire évoluer le système d’information de manière cohérente avec les besoins de l’entreprise.
         </p>
-    </div>
-</section>
 
-<!-- 🎯 PAGE ACCUEIL — 1ère partie -->
-<section id="accueil" class="hero">
-    <!-- Image à gauche -->
-    <div class="hero-image">
-        <img src="mission_img.png" alt="Illustration des missions CESINF">
-    </div>
+        <!-- Bouton audio 2 : rattaché à "Ma mission" -->
+        <button
+          id="btn-audio2"
+          class="audio-button"
+          type="button"
+          data-label="Écouter ma méthode"
+          data-label-pause="Pause méthode"
+        >
+          Écouter ma méthode
+        </button>
+        <audio id="audio2">
+          <source src="audio/audio2.mp3" type="audio/mpeg" />
+          Votre navigateur ne supporte pas la balise audio.
+        </audio>
 
-    <!-- Texte à droite -->
-    <div class="hero-text">
-        <h2>Accueil</h2>
+      </div>
+    </div>
+  </section>
+
+  <section id="accueil-expertise" class="mission domaines_expertise reveal">
+    <div class="mission-inner">
+      <div class="mission-text">
+        <h2>Mes domaines d'expertise</h2>
+
+        <ul>
+          <li>analyse des besoins et des processus métiers</li>
+          <li>organisation des échanges entre applications</li>
+          <li>automatisation de certaines tâches</li>
+          <li>intégration de solutions logicielles</li>
+          <li>mise en cohérence des outils utilisés au quotidien</li>
+        </ul>
+
         <p>
-            CESINF accompagne les petites et moyennes entreprises dans la conception
-            de leur système d'information et le développement d'applications sur mesure.
+        L’objectif est de construire des solutions adaptées au fonctionnement réel de l’entreprise et à l’évolution de ses besoins.
         </p>
+
+
+        </p><!-- Bouton audio 3 : rattaché à "Mes domaines d'expertise" -->
+        <button
+          id="btn-audio3"
+          class="audio-button"
+          type="button"
+          data-label="audio 3"
+          data-label-pause="pause audio 3"
+        >
+          audio 3
+        </button>
+        <audio id="audio3">
+          <source src="audio/audio3.mp3" type="audio/mpeg" />
+          Votre navigateur ne supporte pas la balise audio.
+        </audio>
+
+      </div>
+      <div class="mission-image">
+        <img src="img/domaines_expertise.png" alt="Illustration des domaines d'expertise CESINF"></div>
     </div>
-</section>
+  </section>
 
-<!-- 🎯 SERVICES -->
-<section id="services" class="section section-alt">
-    <h2>Services</h2>
 
-    <p class="section-intro">
-        Quelques exemples de prestations CESINF autour du développement, du conseil
-        et de l'organisation informatique.
-    </p>
+  <!-- =========================
+       BANDE TRANSITION 1
+       ========================= -->
+  <section class="transition-accueil">
 
-    <div class="cards">
-        <article class="card">
-            <h3>Gestion de stock multi-sites</h3>
-            <p>
-                Mise en place d’un outil de gestion des stocks avec seuils d’alerte,
-                entrées/sorties et synthèses par site et globales.
-            </p>
-        </article>
-        <article class="card">
-            <h3>Suivi d’activité</h3>
-            <p>
-                Développement d’une application de bureau pour suivre la production
-                et éditer des rapports pour la direction.
-            </p>
-        </article>
-        <article class="card">
-            <h3>Conception du système d’information</h3>
-            <p>
-                Analyse des besoins, modélisation des données et des flux
-                pour structurer le système d’information d’une PME.
-            </p>
-        </article>
+    <div class="transition-inner">
+      <p>De l’analyse de vos besoins à la mise en œuvre de solutions adaptées.</p>
     </div>
+  </section>
+
+
+
+
+
+  <!-- =========================
+     SERVICES : AUDIT + GESTION DE PROJETS IT
+     (menu : #services)
+     ========================= -->
+
+  <section id="services" class="services reveal">
+    <div class="services-inner">
+
+
+
+      <!-- Bloc Audit : audio 4 -->
+      <div class="service-row">
+        <div class="service-text">
+          <h3>Organisation et optimisation des outils</h3>
+          <p>
+            Analyse de l’organisation, des outils utilisés au quotidien
+            et des échanges d’informations afin d’identifier certains points de blocage
+            ou de complexité dans le fonctionnement de l’entreprise.
+          </p>
+
+          <!-- Bouton audio 4 -->
+          <button
+            id="btn-audio4"
+            class="audio-button"
+            type="button"
+            data-label="Écouter les situations rencontrées"
+            data-label-pause="Pause situations"
+          >
+            Écouter les situations rencontrées
+          </button>
+          <audio id="audio4">
+            <source src="audio/audio4.mp3" type="audio/mpeg" />
+            Votre navigateur ne supporte pas la balise audio.
+          </audio>
+
+        </div>
+        <div class="service-image">
+          <img src="img/audit_img.png" alt="Audit des systèmes d'information">
+        </div>
+      </div>
+
+      <!-- Bloc Solutions adaptées aux besoins métier : audio 5 -->
+      <div class="service-row">
+        <div class="service-image">
+          <img src="img/gestion_projets.png" alt="Gestion de projets informatiques">
+        </div>
+        <div class="service-text">
+          <h3>Solutions adaptées aux besoins métier</h3>
+          <p>
+            <p>
+              Mise en place de solutions adaptées
+              répondant aux cas concrets évoqués précédemment.
+            </p>
+          </p>
+
+          <!-- Bouton audio 5 -->
+          <button
+            id="btn-audio5"
+            class="audio-button"
+            type="button"
+            data-label="Écouter les solutions proposées"
+            data-label-pause="Pause solutions"
+          >
+            Écouter les solutions proposées
+        </button>
+
+        <audio id="audio5">
+          <source src="audio/audio5.mp3" type="audio/mpeg" />
+          Votre navigateur ne supporte pas la balise audio.
+        </audio>
+
+        </div>
+      </div>
+
+
+
+
+
+      <!-- =========================
+     SYNTHÈSE (intégrée à la page)
+     ========================= -->
+<section id="synthese" class="services reveal">
+  <div class="services-inner" style="display:flex; gap:48px; align-items:flex-start; flex-wrap:wrap;">
+
+    <!-- Texte de synthèse -->
+    <div class="synthese-text" style="flex:1; min-width:260px; padding-top:180px;">
+      <h2>Synthèse</h2>
+
+      <p class="synthese-accroche">
+          Comme chaque entreprise possède sa propre organisation, ses propres outils,
+          ses contraintes et ses priorités, les solutions proposées s’adapteront
+          à l’ensemble de ces réalités.
+      </p>
+    </div>
+
+    <!-- Images de synthèse -->
+    <aside class="synthese-images" style="flex:0 0 360px; display:flex; flex-direction:column; gap:24px;">
+      <img src="img/optimisation_infrastructure.png"
+           alt="Optimisation de l'infrastructure"
+           style="width:100%; border-radius:16px; box-shadow:0 18px 40px rgba(0,0,0,.4);">
+
+      <img src="img/nouvelles_solutions.png"
+           alt="Création de nouvelles solutions logicielles"
+           style="width:100%; border-radius:16px; box-shadow:0 18px 40px rgba(0,0,0,.4);">
+    </aside>
+
+  </div>
 </section>
 
-<!-- 🎯 CONTACT -->
-<section id="contact" class="section">
-    <h2>Contact</h2>
 
-    <form class="contact-form">
-        <div class="form-row">
-            <label for="nom">Nom</label>
-            <input type="text" id="nom" name="nom">
+
+
+    </div>
+  </section>
+
+  <!-- =========================
+       PAGE 4 : CONTACT
+       ========================= -->
+  <section id="contact" class="contact-section reveal">
+    <div class="contact-wrapper">
+      <div class="contact-grid">
+        <div class="contact-left">
+          <div class="contact-image">
+            <img src="img/enveloppe_email.png" alt="Icône de contact par e-mail">
+          </div>
+          <p class="contact-text">
+            Vous souhaitez évoquer un besoin, une difficulté ou un projet lié à votre organisation et à vos outils ?<br><br>
+
+            <strong>Ce formulaire permet de préciser votre contexte et vos attentes.</strong>
+          </p>
         </div>
 
-        <div class="form-row">
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email">
+        <div class="contact-right">
+          <h2 class="contact-title">Contact</h2>
+
+          <form action="contact.php" method="post" class="contact-form">
+            <div class="form-row">
+              <label for="nom">
+                Nom <span class="field-note"><em>* Obligatoire</em></span>
+              </label>
+              <input type="text" id="nom" name="nom" required>
+            </div>
+
+            <div class="form-row">
+              <label for="entreprise">
+                Entreprise <span class="field-note"><em>* Obligatoire</em></span>
+              </label>
+              <input type="text" id="entreprise" name="entreprise" required>
+            </div>
+
+            <div class="form-row">
+              <label for="email">
+                E-mail <span class="field-note"><em>* Obligatoire</em></span>
+              </label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-row">
+              <label for="telephone">
+                Téléphone <span class="field-note"><em>* Facultatif</em></span>
+              </label>
+              <input type="tel" id="telephone" name="telephone">
+            </div>
+
+            <div class="form-row">
+              <label for="besoin">
+                Votre besoin <span class="field-note"><em>Soyez le plus précis possible</em></span>
+              </label>
+              <textarea id="besoin" name="besoin"></textarea>
+            </div>
+
+            <div class="contact-actions">
+              <button type="submit" class="contact-button">Transmettre votre message</button>
+            </div>
+          </form>
         </div>
 
-        <div class="form-row">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5"></textarea>
-        </div>
-    </form>
-</section>
+      </div>
+    </div>
+  </section>
 
-<footer class="site-footer">
-    <p>&copy; <span id="year"></span> – CESINF</p>
-</footer>
+  <!-- =========================
+       FOOTER
+       ========================= -->
+  <footer>
+    © <span id="year"></span> CESINF — Tous droits réservés
+  </footer>
 
-<script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+  <!-- =========================
+     SCRIPT : année + gestion des 5 audios
+     ========================= -->
+
+
+<script src="js_final/script.js"></script>
 
 </body>
 </html>

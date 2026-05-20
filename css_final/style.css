@@ -1,0 +1,609 @@
+
+/* =========================================================
+   CESINF - FEUILLE DE STYLE PRINCIPALE
+   ========================================================= */
+
+/* =========================
+   VARIABLES GLOBALES
+   ========================= */
+:root{
+  --bg:#0b0e14;
+  --text:#e6e8ef;
+  --muted:#a5adcb;
+  --brand:#7fffb3;
+  --brand-2:#9cffc9;
+  --ellipse-pink:#ffb3d9;
+}
+
+/* =========================
+   RESET GLOBAL
+   ========================= */
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+/* =========================
+   STYLE GLOBAL DU BODY
+   ========================= */
+body{
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  background:linear-gradient(180deg,#0a0e14 0%,#0b1220 100%);
+  color:var(--text);
+  line-height:1.7;
+  overflow-x:hidden;
+}
+
+/* =========================
+   HEADER / NAVIGATION
+   ========================= */
+header{
+  position:absolute;
+  top:20px;
+  left:40px;
+  display:flex;
+  align-items:center;
+  gap:16px;
+  z-index:2;
+  width:calc(100% - 80px);
+  justify-content:space-between;
+}
+
+.logo-area{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+nav{
+  margin-right:40px;
+}
+
+nav a{
+  color:var(--brand);
+  text-decoration:none;
+  margin:0 16px;
+  font-weight:600;
+  font-size:14px;
+  transition:color 0.3s;
+}
+
+nav a:hover{
+  color:var(--brand-2);
+}
+
+/* =========================
+   PAGE DE GARDE (HERO)
+   ========================= */
+
+.hero{
+  position:relative;
+  overflow:hidden;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:25vh 5vw 25vh;
+}
+
+/* Fond principal de la page d'accueil */
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-2;
+
+  background-image:
+    linear-gradient(rgba(6,18,31,.55), rgba(6,18,31,.55)),
+    url("../img/page_de_garde.png");
+
+  background-size:cover;
+  background-position:center;
+  background-attachment:scroll;
+  opacity:1;
+}
+
+/* Contenu principal du hero */
+.hero > div{
+  position:relative;
+  z-index:1;
+}
+
+/* Titre principal CESINF */
+h1{
+  font-size:64px;
+  margin-bottom:6px;
+  color:var(--brand);
+}
+
+/* Slogan sous le titre */
+.slogan{
+  font-size:28px;
+  font-style:italic;
+  margin:10px 0 35px;
+}
+
+/* Texte de présentation */
+.lead{
+  font-size:22px;
+  max-width:1000px;
+  margin:40px auto 12px;
+  line-height:1.9;
+}
+
+/* Petite indication audio */
+.hero-note{
+  font-size:14px;
+  font-style:italic;
+  color:var(--muted);
+  margin-bottom:24px;
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  padding:24px 0;
+  color:var(--muted);
+}
+
+
+/* =========================
+   BOUTONS AUDIO
+   ========================= */
+
+/* Style commun à tous les boutons audio */
+.audio-button{
+  display:inline-block;
+  margin-top:10px;
+  padding:6px 16px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,0.4);
+  background:transparent;
+  color:var(--brand);
+  font-size:14px;
+  font-weight:500;
+  cursor:pointer;
+  transition:background 0.2s ease, transform 0.1s ease, color 0.2s ease;
+}
+
+/* Effet visuel au survol */
+.audio-button:hover{
+  background:var(--brand);
+  color:#000;
+  transform:translateY(-1px);
+}
+
+/* Effet au clic */
+.audio-button:active{
+  transform:translateY(0);
+}
+
+/* =========================
+   SECTIONS MISSION / EXPERTISE
+   ========================= */
+
+/* Section principale utilisée pour "Ma mission" */
+.mission{
+  padding-top:140px;
+  padding-bottom:80px;
+  padding-left:8vw;
+  padding-right:8vw;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:radial-gradient(circle at top, rgba(127,255,179,0.08), transparent 60%);
+}
+
+/* Conteneur interne : image + texte */
+.mission-inner{
+  display:flex;
+  gap:48px;
+  max-width:1100px;
+  width:100%;
+  align-items:center;
+  flex-wrap:wrap;
+  padding:40px 0;
+}
+
+/* Images des sections mission/expertise */
+.mission-image img{
+  max-width:380px;
+  width:100%;
+  height:auto;
+  border-radius:16px;
+  box-shadow:0 18px 40px rgba(0,0,0,.5);
+}
+
+/* Bloc texte */
+.mission-text{
+  flex:1;
+  min-width:260px;
+}
+
+/* Variante pour la section "Domaines d'expertise" */
+.domaines_expertise{
+  background:radial-gradient(circle at top, rgba(127,255,179,0.05), transparent 60%);
+}
+
+/* Titres des blocs mission/expertise */
+.mission-text h2{
+  font-size:32px;
+  margin-bottom:12px;
+  color:var(--brand);
+  font-weight:600;
+}
+
+/* Paragraphes des blocs mission/expertise */
+.mission-text p{
+  font-size:18px;
+  line-height:1.8;
+  color:var(--text);
+}
+
+/* Liste des domaines d'expertise */
+.mission-text ul{
+  margin-left:22px;
+  margin-bottom:18px;
+  font-size:18px;
+  line-height:1.8;
+}
+
+
+/* =========================
+   BANDE DE TRANSITION
+   ========================= */
+
+/* Bande claire entre les sections */
+.transition-accueil{
+  height:240px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:0 8vw;
+  background:linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.85),
+    rgba(245,245,245,1),
+    rgba(235,235,235,0.95)
+  );
+  border-top:2px solid rgba(255,255,255,0.7);
+  border-bottom:2px solid rgba(255,255,255,0.7);
+  box-shadow:inset 0 10px 25px rgba(0,0,0,0.1),
+             inset 0 -10px 25px rgba(0,0,0,0.08);
+}
+
+/* Texte central de la bande */
+.transition-inner p{
+  font-size:30px;
+  font-weight:500;
+  text-align:center;
+  color:#222;
+  opacity:1;
+}
+
+/* =========================
+   SECTIONS SERVICES
+   ========================= */
+
+/* Zone générale des services */
+.services{
+  padding:10vh 8vw;
+}
+
+/* Conteneur interne des services */
+.services-inner{
+  max-width:1100px;
+  margin:0 auto;
+}
+
+/* Titre principal d'une section services */
+.services-inner h2{
+  font-size:32px;
+  margin-bottom:32px;
+  color:var(--brand);
+  text-align:center;
+}
+
+/* Ligne image + texte */
+.service-row{
+  display:flex;
+  gap:48px;
+  align-items:flex-start;
+  flex-wrap:wrap;
+  margin-bottom:48px;
+}
+
+/* Suppression de la marge sous la dernière ligne */
+.service-row:last-of-type{
+  margin-bottom:0;
+}
+
+/* Bloc texte d'un service */
+.service-text{
+  flex:1;
+  min-width:260px;
+}
+
+/* Image d'un service */
+.service-image img{
+  max-width:380px;
+  width:100%;
+  height:auto;
+  border-radius:16px;
+  box-shadow:0 18px 40px rgba(0,0,0,.4);
+}
+
+/* Titre d'un service */
+.service-text h3{
+  font-size:26px;
+  margin-bottom:8px;
+  color:var(--brand);
+  font-weight:600;
+  font-family:inherit;
+}
+
+/* Paragraphe d'un service */
+.service-text p{
+  font-size:18px;
+  line-height:1.8;
+  color:var(--text);
+}
+
+/* =========================
+   SECTION CONTACT
+   ========================= */
+
+/* Bloc général du formulaire de contact */
+.contact-section{
+  padding:60px 8vw 80px;
+  background:#f7f7f7;
+  border-top:1px solid #ddd;
+  border-bottom:1px solid #ddd;
+  color:#222;
+}
+
+/* Largeur maximale du contenu contact */
+.contact-wrapper{
+  max-width:1100px;
+  margin:0 auto;
+}
+
+/* Organisation en deux colonnes */
+.contact-grid{
+  display:flex;
+  flex-wrap:wrap;
+  gap:40px;
+  align-items:flex-start;
+}
+
+/* Partie gauche : image + texte */
+.contact-left{
+  flex:1;
+  min-width:260px;
+}
+
+/* Image enveloppe */
+.contact-image{
+  margin-bottom:16px;
+}
+
+.contact-image img{
+  max-width:140px;
+  height:auto;
+  display:block;
+}
+
+/* Texte explicatif du contact */
+.contact-text{
+  font-size:17px;
+  line-height:1.7;
+  color:#333;
+  font-style:italic;
+}
+
+/* Partie droite : formulaire */
+.contact-right{
+  flex:1;
+  min-width:260px;
+}
+
+/* Titre Contact */
+.contact-title{
+  font-size:32px;
+  margin-bottom:16px;
+  text-align:left;
+  color:#111;
+}
+
+/* Formulaire complet */
+.contact-form{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+/* Une ligne du formulaire */
+.form-row{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+
+/* Libellé d'un champ */
+.form-row label{
+  font-weight:600;
+  color:#222;
+}
+
+/* Note à côté des champs */
+.field-note{
+  font-size:13px;
+  color:#555;
+  font-style:italic;
+  margin-left:4px;
+}
+
+/* Champs texte et zone de texte */
+.form-row input,
+.form-row textarea{
+  padding:10px 12px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  font-size:16px;
+  font-family:inherit;
+  color:#222;
+  background:#fff;
+}
+
+/* Zone de texte plus grande */
+.form-row textarea{
+  min-height:120px;
+  max-height:300px;
+  resize:vertical;
+  overflow-y:auto;
+}
+
+/* Effet quand on clique dans un champ */
+.form-row input:focus,
+.form-row textarea:focus{
+  outline:none;
+  border-color:var(--brand);
+}
+
+/* Zone du bouton */
+.contact-actions{
+  margin-top:10px;
+  display:flex;
+  justify-content:flex-start;
+}
+
+/* Bouton d'envoi */
+.contact-button{
+  padding:10px 22px;
+  border-radius:10px;
+  border:none;
+  background:var(--brand);
+  color:#000;
+  font-weight:600;
+  font-size:16px;
+  cursor:pointer;
+  transition:background 0.2s ease, transform 0.1s ease;
+}
+
+/* Survol du bouton */
+.contact-button:hover{
+  background:var(--brand-2);
+  transform:translateY(-1px);
+}
+
+/* Clic sur le bouton */
+.contact-button:active{
+  transform:translateY(0);
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+/* Adaptation de la page pour les écrans plus petits */
+@media (max-width: 900px){
+
+  h1{
+    font-size:42px;
+  }
+
+  .slogan{
+    font-size:22px;
+  }
+
+  .lead{
+    font-size:18px;
+    margin-top:30px;
+  }
+
+  header{
+    left:16px;
+    width:calc(100% - 32px);
+  }
+
+  nav{
+    margin-right:0;
+  }
+
+  nav a{
+    margin:0 8px;
+    font-size:13px;
+  }
+
+  .mission{
+    padding:6vh 6vw;
+  }
+
+  .mission-inner{
+    flex-direction:column;
+    text-align:left;
+  }
+
+  .mission-text h2{
+    text-align:left;
+  }
+
+  .service-row{
+    flex-direction:column;
+  }
+
+  .contact-grid{
+    flex-direction:column;
+  }
+
+  .contact-title{
+    text-align:center;
+  }
+
+  .contact-actions{
+    justify-content:center;
+  }
+}
+
+/* =========================
+   ANIMATIONS REVEAL
+   ========================= */
+
+/* Par défaut, les éléments sont visibles */
+.reveal{
+  opacity:1;
+  transform:none;
+}
+
+/* Quand JavaScript est actif, on prépare l'animation */
+.js .reveal{
+  opacity:0;
+  transform:translateY(120px);
+  transition:opacity .9s ease, transform .9s ease;
+  will-change:opacity, transform;
+}
+
+/* Classe ajoutée par JavaScript quand l'élément devient visible */
+.js .reveal.is-visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* Respect des préférences utilisateur : réduction des animations */
+@media (prefers-reduced-motion: reduce){
+  html{
+    scroll-behavior:auto;
+  }
+
+  .reveal{
+    opacity:1;
+    transform:none;
+    transition:none;
+  }
+}
+
+

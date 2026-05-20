@@ -1,0 +1,30 @@
+
+# Environnement Python
+.venv/
+
+# Cache Python
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# PyCharm
+.idea/
+
+# Logs
+*.log
+
+# PyCharm complet
+.idea/
+
+# Fichiers PyCharm
+.idea/
+
+# Sauvegardes / archives
+*_ancien.mp3
+index_avant_recuperation.html
+
+# Export navigateur inutile
+CESINF*Information.html
+CESINF*Information_files/
