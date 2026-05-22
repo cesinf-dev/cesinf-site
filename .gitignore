@@ -14,16 +14,9 @@ __pycache__/
 
 # Logs
 *.log
-
-# PyCharm complet
-.idea/
-
-# Fichiers PyCharm
-.idea/
-
 # Sauvegardes / archives
 *_ancien.mp3
-index_avant_recuperation.html
+archives/index_avant_recuperation.html
 
 # Export navigateur inutile
 CESINF*Information.html

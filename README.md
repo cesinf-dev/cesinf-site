@@ -77,6 +77,8 @@ http://localhost:8000
 - Animations visuelles
 - Lecture audio intégrée
 - Structure centralisée autour de `index.html`
+- Parcours audio séquentiel complémentaire :
+  `audio2.html → audio3.html → audio4.html → audio5.html → synthese.html`
 
 ---
 
