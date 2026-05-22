@@ -26,6 +26,33 @@ document.addEventListener("DOMContentLoaded", function () {
     yearSpan.textContent = new Date().getFullYear();
   }
 
+    /* =========================
+     NAVIGATION CONTRÔLÉE DU MENU
+     ========================= */
+
+  const navLinks = document.querySelectorAll('nav a[href^="#"]');
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+
+      const targetId = this.getAttribute("href");
+      const targetSection = document.querySelector(targetId);
+
+      if (!targetSection) return;
+
+      const offset = 0;
+      const targetPosition =
+        targetSection.getBoundingClientRect().top + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: targetPosition,
+        behavior: "smooth"
+      });
+    });
+  });
+
+
    /* =========================
      GESTION CENTRALISÉE DES AUDIOS
      ========================= */

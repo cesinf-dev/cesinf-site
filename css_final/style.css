@@ -4,6 +4,16 @@
    ========================================================= */
 
 /* =========================
+   RÉGLAGES GÉNÉRAUX DE SCROLL
+   ========================= */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+
+/* =========================
    VARIABLES GLOBALES
    ========================= */
 :root{
@@ -587,7 +597,7 @@ footer{
 /* Quand JavaScript est actif, on prépare l'animation */
 .js .reveal{
   opacity:0;
-  transform:translateY(120px);
+  transform:translateY(40px);
   transition:opacity .9s ease, transform .9s ease;
   will-change:opacity, transform;
 }
@@ -610,6 +620,8 @@ footer{
     transition:none;
   }
 }
+
+
 
 
 
